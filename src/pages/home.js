@@ -89,7 +89,7 @@ function Home(){
         <div className="title" onClick={handleTitleClick}>
             ΤΟ ΑΛΦΑΒΗΤΑΡΙ ΤΩΝ ΒΟΤΑΝΩΝ</div>
       <div className="carousel-container">
-        <button className="nav-btn" onClick={handlePrev}>
+        <button className="nav-btn prev" onClick={handlePrev}>
           <FaArrowLeft />
         </button>
 
@@ -113,7 +113,7 @@ function Home(){
           </div>
         ))}
 
-        <button className="nav-btn" onClick={handleNext}>
+        <button className="nav-btn next" onClick={handleNext}>
           <FaArrowRight />
         </button>
       </div>
