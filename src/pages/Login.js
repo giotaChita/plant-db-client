@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 
+LINK = 'https://plantdbmenem.netlify.app/';
 
 function Login() {
     const [username, setUsername] = useState("");
@@ -11,7 +12,7 @@ function Login() {
     const login = async () => {
       try {
         const data = { username, password };
-        const response = await axios.post("http://localhost:3001/auth/login", data);
+        const response = await axios.post(`${LINK}auth/login`, data);
         
         setSuccessMessage("Login successful!");
         setErrorMessage(""); // clear previous errors

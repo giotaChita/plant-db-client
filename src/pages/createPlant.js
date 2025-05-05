@@ -3,7 +3,7 @@ import {Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 
-
+LINK = 'https://plantdbmenem.netlify.app/';
 function AddPlant(){
 
     const [isSuccess, setIsSuccess] = useState(false);
@@ -22,7 +22,7 @@ function AddPlant(){
     
     
     const onSubmit = (data, {resetForm}) => {
-        axios.post("http://localhost:3001/plant", data).then((response) => {
+        axios.post(`${LINK}plant`, data).then((response) => {
             console.log("WORKING!");
             setIsSuccess(true);
             // resetForm();
