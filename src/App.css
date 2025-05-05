@@ -1,0 +1,370 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: rgb(158, 180, 158);
+  align-items: center;
+  padding-top: 40px;
+  flex-direction: column;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.post {
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border: 1px solid rgb(172, 168, 168);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: rgb(100, 53, 148) 0px 2px 8px 0px;
+}
+
+
+.title {
+  font-family: 'Rubik Wet Paint', cursive;
+  font-size: 48px;
+  color: #45012e;
+  text-align: center;
+  margin-top: auto;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 100px;              /* Ensures full rectangular area */
+  line-height: 100px;         /* Vertically center text */
+  background-color: transparent;  /* Optional: add a visible background if you want */
+  display: inline-block;   
+  padding: 20px;    
+  /* overflow: hidden;            */
+}
+
+.title:hover {
+  transform: scale(1.05);
+}
+
+
+/* Plant growing styles */
+.growing-plant {
+  position: absolute;
+  width: 20px; /* Size of the "plant" */
+  height: 20px;
+  background-color: #8B5E3C; /* Brown color */
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  transform-origin: center center; /* Makes it grow from center */
+}
+
+.plant-svg {
+  position: absolute;
+  width: 180px;
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.plant-bottom-right {
+  bottom: -20px;
+  right: -40px;
+  transform: scaleY(-1);
+
+}
+
+.plant-bottom-left {
+  bottom: -20px;
+  left: -40px;
+  transform: scaleX(-1); /* Flip horizontally */
+  
+}
+
+.post:hover{
+  box-shadow: rgb(57, 17, 97) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+.post .title {
+  flex: 20%;
+  place-content: center;
+
+  border-bottom: 1px solid lightgray;
+  background-color: rgb(114, 29, 93);
+  display: grid;
+  color: antiquewhite;
+}
+
+.post .body {
+  flex: 60%;
+  display: block;
+  place-content: center;
+}
+
+.post .footer {
+  flex: 20%;
+  border-top: 1px solid lightgray;
+  display: flex;
+  align-items:  center;
+  padding-left: 15px;
+  background-color: antiquewhite;
+  color: black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.plant {
+  width: 400px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border: 1px solid rgb(172, 168, 168);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: rgb(100, 53, 148) 0px 2px 8px 0px;
+}
+
+.plant:hover {
+  box-shadow: rgb(57, 17, 97) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+
+.plant .name {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(114, 29, 93);
+  color: rgb(255, 254, 252);
+  padding: 10px;
+  text-align: center;
+}
+
+.plant .body {
+  padding: 10px;
+  text-align: center;
+}
+
+.plant .photo {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.plant .photo img {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.navigation button {
+  background-color: rgb(114, 29, 93);
+  color: rgb(247, 241, 241);
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+.navigation button:hover {
+  background-color: rgb(211, 73, 174);
+} 
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  height: 80%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.side-plant {
+  transform: scale(0.7);
+  opacity: 0.5;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.center-plant {
+  transform: scale(1.05);
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(114, 29, 93, 0.5);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-btn {
+  background-color: rgb(114, 29, 93);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  height: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgb(170, 55, 140);
+}
+
+
+/* ADD PLANT PAGE */
+
+.createPlantPage {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  width: 100vw;
+  height: 80vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  display:grid;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  margin-top: 10%;
+  border: 5px solid rgb(114, 10, 109);
+  border-radius: 5px;
+}
+
+.formContainer #inputCreatePost {
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+.formContainer button {
+  margin-top: 15px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background-color: rgb(114, 10, 109);;
+  border-radius: 5px;
+  color: white;
+}
+
+.formContainer button:hover {
+  cursor: pointer;
+  background-color: rgb(168, 15, 161);
+}
+
+span {
+  color: red;
+}
+
+.successMessage {
+  margin-top: 20px;
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.successMessage button {
+  margin-top: 10px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.successMessage button:hover {
+  background-color: #218838;
+}
+
+/* DELETE PLANT */
+
+.delete-btn {
+  float: right;
+  color: rgb(155, 83, 83);
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.delete-btn:hover {
+  color: red;
+}
+
+/* Navigation bar */
+
+.nav-bar{
+  width: 100%;
+  height: 10%;
+  background-color: #45012e;
+  display: flex;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+} 
+
+
+.nav-bar a {
+  color: white;
+  text-decoration:none;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.4s ease;
+}
+.nav-bar a:hover {
+  color:antiquewhite;
+
+}
+
+/* LOGIN */
+
+.loginContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.loginContainer input,
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+}
+
+.loginContainer button {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.loginContainer input {
+  border: 2px solid dodgerblue;
+}
