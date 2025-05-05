@@ -5,7 +5,6 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import {gsap} from "gsap";
 import '../App.css'
 
-LINK = 'https://plantdbmenem.netlify.app/';
 
 function Home(){
 
@@ -50,7 +49,7 @@ function Home(){
     // Delete a plant
     const deletePlant = async (id) => {
       try{
-        await axios.delete(`${LINK}plant/${id}`);
+        await axios.delete(`https://plantdbmenem.netlify.app/plant/${id}`);
         setListOfPlants(listOfPlants.filter((plant) => plant.id !== id));
         setCurrentIndex(0); // reset to avoid out-of-range
       }
@@ -60,7 +59,7 @@ function Home(){
     };
 
     useEffect(() => {
-        axios.get(`${LINK}plant`).then((response) => {
+        axios.get("https://plantdbmenem.netlify.app/plant").then((response) => {
             setListOfPlants(response.data);
         });
     }, []);

@@ -3,7 +3,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from 'yup';
 import axios from 'axios';
 
-LINK = 'https://plantdbmenem.netlify.app/';
 
 function Registration() {
     const initialValues = {
@@ -26,7 +25,7 @@ function Registration() {
 
     const onSubmit = async (data, { setSubmitting, setErrors, setFieldValue , resetForm}) => {
         try {
-            const response = await axios.post(`${LINK}auth`, data);
+            const response = await axios.post("https://plantdbmenem.netlify.app/auth", data);
             console.log(response.data);
             setSuccessMessage("Registration successful!");
             resetForm();
