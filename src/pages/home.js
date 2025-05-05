@@ -75,9 +75,9 @@ function Home(){
     // Guard against undefined or empty list plants
     const currentPlant = listOfPlants[currentIndex];
 
-    // if (!currentPlant) {
-    //     return <div>Loading...</div>;
-    // }
+    if (!currentPlant) {
+        return <div>Loading...</div>;
+    }
 
     const getPlant = (offset) => {
         const index = (currentIndex + offset + listOfPlants.length) % listOfPlants.length;
