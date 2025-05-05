@@ -59,7 +59,7 @@ function Home(){
     };
 
     useEffect(() => {
-        axios.get("https://plantdbmenem.netlify.app/plant").then((response) => {
+        axios.get("https://plant-db-7e0c17d70235.herokuapp.com/plant").then((response) => {
             setListOfPlants(response.data);
         });
     }, []);
