@@ -25,7 +25,7 @@ function Registration() {
 
     const onSubmit = async (data, { setSubmitting, setErrors, setFieldValue , resetForm}) => {
         try {
-            const response = await axios.post("https://plantdbmenem.netlify.app/auth", data);
+            const response = await axios.post("https://plant-db-7e0c17d70235.herokuapp.com/auth", data);
             console.log(response.data);
             setSuccessMessage("Registration successful!");
             resetForm();

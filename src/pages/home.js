@@ -49,7 +49,7 @@ function Home(){
     // Delete a plant
     const deletePlant = async (id) => {
       try{
-        await axios.delete(`https://plantdbmenem.netlify.app/plant/${id}`);
+        await axios.delete(`https://plant-db-7e0c17d70235.herokuapp.com/plant/${id}`);
         setListOfPlants(listOfPlants.filter((plant) => plant.id !== id));
         setCurrentIndex(0); // reset to avoid out-of-range
       }

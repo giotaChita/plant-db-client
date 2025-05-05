@@ -22,11 +22,11 @@ function AddPlant(){
     
     
     const onSubmit = (data, {resetForm}) => {
-        axios.post("https://plantdbmenem.netlify.app/plant", data).then((response) => {
+        axios.post("https://plant-db-7e0c17d70235.herokuapp.com/plant", data).then((response) => {
             console.log("WORKING!");
             setIsSuccess(true);    
             const onSubmit = (data, {resetForm}) => {
-                axios.post("https://plantdbmenem.netlify.app/plant", data).then((response) => {
+                axios.post("https://plant-db-7e0c17d70235.herokuapp.com/plant", data).then((response) => {
                     console.log("WORKING!");
                     setIsSuccess(true);
                     // resetForm();

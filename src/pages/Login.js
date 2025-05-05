@@ -12,7 +12,7 @@ function Login() {
     const login = async () => {
       try {
         const data = { username, password };
-        const response = await axios.post("https://plantdbmenem.netlify.app/auth/login", data);
+        const response = await axios.post("https://plant-db-7e0c17d70235.herokuapp.com/auth/login", data);
         
         setSuccessMessage("Login successful!");
         setErrorMessage(""); // clear previous errors
