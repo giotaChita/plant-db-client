@@ -368,10 +368,33 @@ span {
     width: clamp(300px, 90%, 600px);
     font-size: 0.875;
   }
+    /* Carousel Container */
+    .carousel-container {
+      gap: 20px; /* Adjust the gap between items */
+      padding: 1rem; /* Adjust carousel padding */
+    }
+  
+    /* Center Plant (Adjust size and scale) */
+    .center-plant {
+      max-width: 100%; /* Allow the center plant to be full width */
+      transform: scale(1); /* Scale down the plant size */
+    }
+  
+    /* Plant Name */
+    .plant .name {
+      font-size: 1rem; /* Reduce font size for small screens */
+      padding: 0.5rem; /* Adjust padding */
+    }
+  
+    /* Plant Body */
+    .plant .body {
+      font-size: 0.875rem; /* Smaller text for readability */
+      padding: 0.5rem; /* Adjust padding */
+    }
 
-  .center-plant {
+  /* .center-plant {
     max-width: 90%;
-  }
+  } */
 
 
   .nav-btn {
@@ -403,7 +426,4 @@ span {
     font-size: 0.875rem; /* Smaller font size for buttons */
   }
 
-  .title {
-    font-size: 2rem; /* Adjust title font size on mobile */
-  }
 }
