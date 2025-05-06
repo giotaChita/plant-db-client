@@ -133,7 +133,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: clamp(10px, 5vw, 40px); /* Ensures space between plants & arrows */
-    width: 100%;
+    width: 80%;
     height: auto;
     flex-wrap: nowrap;
     overflow: hidden; /* Hide overflowing content */
