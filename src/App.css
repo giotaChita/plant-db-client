@@ -78,6 +78,7 @@ body {
   height: auto;
   line-height: 1.2;
   padding: 1.25rem;
+  top:10%
 }
 
 .title:hover {
@@ -402,6 +403,7 @@ span {
     font-size: 2rem;
     padding:1rem;
     line-height: 1.1;
+    top: 5%;
   }
 
 
