@@ -374,7 +374,8 @@ button {
 /* Responsive Media Queries */
 @media (max-width: 768px) {
   .post, .plant {
-    width: 90%;
+    /* width: 90%; */
+    width: clamp(300px, 80%, 400px);
   }
   .nav-btn {
     padding: 10px;
