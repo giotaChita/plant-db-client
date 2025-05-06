@@ -165,6 +165,7 @@ body {
   /* max-width: clamp(350px, 90%, 600px); */
   width: 100%;
   box-sizing:content-box;
+  margin-bottom: 1rem;
 }
 
 /*plant growing*/
