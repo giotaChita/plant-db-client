@@ -21,7 +21,6 @@ body {
 .post, .plant {
   width: clamp(300px, 90%, 500px);
   max-width: 90vw;
-  min-width: 50vw;
   border-radius: 0.625rem;
   display: flex;
   flex-direction: column;
@@ -367,6 +366,8 @@ span {
 @media (max-width: 768px) {
   .post, .plant {
     /* width: clamp(300px, 90%, 600px); */
+    min-width: 50vw;
+
     font-size: 0.875;
   }
     /* Carousel Container */
@@ -397,14 +398,16 @@ span {
     max-width: 90%;
   } */
 
+  .title {
+    font-size: 2rem;
+    padding:1rem;
+    line-height: 1.1;
+  }
+
 
   .nav-btn {
     padding: 10px;
     font-size: 1rem;
-  }
-
-  .title {
-    font-size: 2rem;
   }
 
   .nav-bar a {
