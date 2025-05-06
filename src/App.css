@@ -21,7 +21,7 @@ body {
 .post, .plant {
   width: clamp(300px, 90%, 500px);
   max-width: 90vw;
-  min-width: 70vw;
+  min-width: 50vw;
   border-radius: 0.625rem;
   display: flex;
   flex-direction: column;
