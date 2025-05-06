@@ -133,7 +133,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: clamp(10px, 5vw, 40px); /* Ensures space between plants & arrows */
-    width: 80%;
+    width:100%;
     height: auto;
     flex-wrap: nowrap;
     overflow: hidden; /* Hide overflowing content */
@@ -162,7 +162,7 @@ body {
   opacity: 1;
   box-shadow: 0 0 15px rgba(114, 29, 93, 0.5);
   transition: transform 0.3s ease, opacity 0.3s ease;
-  /* max-width: clamp(350px, 90%, 600px); */
+  max-width: clamp(350px, 90%, 600px);
   width: 100%;
   box-sizing:content-box;
   margin-bottom: 1rem;
