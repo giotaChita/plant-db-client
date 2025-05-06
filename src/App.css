@@ -114,9 +114,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: clamp(10px, 5vw, 40px); /* Ensures space between plants & arrows */
+  height: auto;
   width: 100%;
   flex-wrap: nowrap;
-  overflow: hidden;
+  overflow: visible; /* chnage to hidden */
 }
 
 /* Scaling Animation */
