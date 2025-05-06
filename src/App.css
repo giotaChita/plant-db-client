@@ -108,17 +108,30 @@ body {
 }
 
 /* Carousel */
-.carousel-container {
+/* .carousel-container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(10px, 5vw, 40px); /* Ensures space between plants & arrows */
+  gap: clamp(10px, 5vw, 40px);
   height: auto;
   width: 100%;
   flex-wrap: nowrap;
-  overflow: visible; /* chnage to hidden */
-}
+  overflow: visible;  */
+
+  .carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 5vw, 40px); /* Ensures space between plants & arrows */
+    width: 100%;
+    height: auto;
+    flex-wrap: nowrap;
+    overflow: hidden; /* Hide overflowing content */
+    padding: 1rem; /* Optional: adds spacing around the carousel */
+    box-sizing: border-box;
+  }
 
 /* Scaling Animation */
 .side-plant {
@@ -127,12 +140,22 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* .center-plant {
+  transform: scale(1.15);
+  align-items: center;
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(114, 29, 93, 0.5);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  max-width: clamp(350px, 90%, 600px);
+} */
 .center-plant {
   transform: scale(1.15);
   opacity: 1;
   box-shadow: 0 0 15px rgba(114, 29, 93, 0.5);
   transition: transform 0.3s ease, opacity 0.3s ease;
   max-width: clamp(350px, 90%, 600px);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /*plant growing*/
