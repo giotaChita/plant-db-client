@@ -222,11 +222,11 @@ body {
 }
 
 .nav-btn.prev {
-  left: 10px;
+  left: clamp(5px, 2vw, 30px);
 }
 
 .nav-btn.next {
-  right: 10px;
+  right: clamp(5px, 2vw, 30px);
 }
 
 .nav-btn:hover {
