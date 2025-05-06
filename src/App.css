@@ -72,13 +72,13 @@ body {
   font-size: 3rem;
   color: #45012e;
   text-align: center;
-  margin-top: auto;
+  margin-top: 10;
   position: relative;
   transition: transform 0.3s ease;
   height: auto;
   line-height: 1.2;
   padding: 1.25rem;
-  top:10%
+  /* top:10% */
 }
 
 .title:hover {
