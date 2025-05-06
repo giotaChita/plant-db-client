@@ -365,7 +365,7 @@ span {
 /* Mobile Tweaks */
 @media (max-width: 768px) {
   .post, .plant {
-    width: clamp(300px, 90%, 600px);
+    /* width: clamp(300px, 90%, 600px); */
     font-size: 0.875;
   }
     /* Carousel Container */
