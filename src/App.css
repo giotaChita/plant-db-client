@@ -27,6 +27,7 @@ body {
   margin-top: 3.125rem;
   border: 1px solid rgb(172, 168, 168);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
   box-shadow: rgb(100, 53, 148) 0px 2px 8px 0px;
 }
 
@@ -209,11 +210,11 @@ body {
 }
 
 .nav-btn.prev {
-  left: clamp(10px, 5vw, 50px); /* Move away from center plant */
+  left: clamp(5px, 2vw, 30px); /* Move away from center plant */
 }
 
 .nav-btn.next {
-  right: clamp(10px, 5vw, 50px);
+  right: clamp(5px, 2vw, 30px);
 }
 
 .nav-btn:hover {
@@ -359,6 +360,7 @@ span {
 @media (max-width: 768px) {
   .post, .plant {
     width: clamp(300px, 80%, 400px);
+    font-size: 14px;
   }
 
   .center-plant {
@@ -385,6 +387,24 @@ span {
   .loginContainer input,
   .loginContainer button {
     width: 80%;
+  }
+
+  .formContainer #inputCreatePost {
+    font-size: 1rem; /* Adjust font size for input fields */
+  }
+
+  /* Additional font size adjustments */
+  .post .body,
+  .plant .body {
+    font-size: 14px; /* Smaller font size for body text */
+  }
+
+  .formContainer button {
+    font-size: 0.875rem; /* Smaller font size for buttons */
+  }
+
+  .title {
+    font-size: 2rem; /* Adjust title font size on mobile */
   }
 }
 
