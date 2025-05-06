@@ -359,8 +359,8 @@ span {
 /* Mobile Tweaks */
 @media (max-width: 768px) {
   .post, .plant {
-    width: clamp(300px, 80%, 400px);
-    font-size: 14px;
+    width: clamp(300px, 90%, 600px);
+    font-size: 0.875;
   }
 
   .center-plant {
