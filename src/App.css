@@ -373,23 +373,6 @@ span {
     max-width: 90%;
   }
 
-  .plant .name {
-    font-size: 1.5rem; /* Make the title larger */
-    width: 100%; /* Ensure title takes full width */
-    padding: 1rem;
-    text-align: center; /* Keep the title centered */
-  }
-
-  /* Increase the width of the body text */
-  .plant .body {
-    width: 100%; /* Ensure the body takes full width */
-    padding: 1rem; /* Optional: add padding for spacing */
-    font-size: 0.875rem; /* Adjust font size for better readability */
-    word-wrap: break-word; /* Prevent text overflow */
-    overflow-wrap: break-word; /* Ensures long words break */
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
-  }
-
 
   .nav-btn {
     padding: 10px;
