@@ -139,6 +139,7 @@ body {
     overflow: hidden; /* Hide overflowing content */
     padding: 1rem; /* Optional: adds spacing around the carousel */
     box-sizing: border-box;
+    padding-bottom: 2rem;
   }
 
 /* Scaling Animation */
