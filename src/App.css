@@ -72,7 +72,7 @@ body {
   font-size: 3rem;
   color: #45012e;
   text-align: center;
-  margin-top: 10;
+  margin-top: 10%;
   position: relative;
   transition: transform 0.3s ease;
   height: auto;
@@ -400,6 +400,7 @@ span {
   } */
 
   .title {
+    font-family: 'Rubik Wet Paint', cursive;
     font-size: 2rem;
     padding:1rem;
     line-height: 1.1;
