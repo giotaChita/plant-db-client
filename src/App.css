@@ -357,6 +357,19 @@ span {
 
 /* Mobile Tweaks */
 @media (max-width: 768px) {
+  .post, .plant {
+    width: clamp(300px, 80%, 400px);
+  }
+
+  .center-plant {
+    max-width: 90%;
+  }
+
+  .nav-btn {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
   .title {
     font-size: 2rem;
   }
@@ -365,9 +378,13 @@ span {
     font-size: 1rem;
   }
 
-  .nav-btn {
-    font-size: 1rem;
-    padding: 10px;
+  .formContainer {
+    width: 90%;
+  }
+
+  .loginContainer input,
+  .loginContainer button {
+    width: 80%;
   }
 }
 
