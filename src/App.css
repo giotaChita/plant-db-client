@@ -127,11 +127,45 @@ body {
 }
 
 .center-plant {
-  transform: scale(1.05);
+  transform: scale(1.15);
   opacity: 1;
   box-shadow: 0 0 15px rgba(114, 29, 93, 0.5);
   transition: transform 0.3s ease, opacity 0.3s ease;
+  max-width: clamp(350px, 90%, 600px);
 }
+
+/*plant growing*/
+.growing-plant {
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #8B5E3C;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  transform-origin: center;
+}
+
+.plant-svg {
+  position: absolute;
+  width: 11.25rem;
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.plant-bottom-right {
+  bottom: -1.25rem;
+  right: -2.5rem;
+  transform: scaleY(-1);
+}
+
+.plant-bottom-left {
+  bottom: -1.25rem;
+  left: -2.5rem;
+  transform: scaleX(-1);
+}
+
 
 /* Arrows - Responsive */
 .nav-btn {
