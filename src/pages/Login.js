@@ -9,28 +9,30 @@ function Login() {
     const [errorMessage, setErrorMessage] = useState("");
   
     const login = async () => {
-      try {
+      // try {
         const data = { username, password };
         const response = await axios.post("https://plant-db-7e0c17d70235.herokuapp.com/auth/login", data);
         
+        if (response.data.error) alert(response.data.error);
+        sessionStorage.setItem("accessToken", response.data);
         setSuccessMessage("Login successful!");
         setErrorMessage(""); // clear previous errors
         console.log(response.data);
-      } catch (error) {
-        setSuccessMessage(""); // clear success message on error
+    //   } catch (error) {
+    //     setSuccessMessage(""); // clear success message on error
   
-        if (error.response) {
-          if (error.response.status === 403) {
-            setErrorMessage("Wrong Username and Password Combination.");
-          } else if (error.response.status === 404) {
-            setErrorMessage("User not found.");
-          } else {
-            setErrorMessage("Unexpected error. Try again.");
-          }
-        } else {
-          setErrorMessage("Network error. Check your connection.");
-        }
-      }
+    //     if (error.response) {
+    //       if (error.response.status === 403) {
+    //         setErrorMessage("Wrong Username and Password Combination.");
+    //       } else if (error.response.status === 404) {
+    //         setErrorMessage("User not found.");
+    //       } else {
+    //         setErrorMessage("Unexpected error. Try again.");
+    //       }
+    //     } else {
+    //       setErrorMessage("Network error. Check your connection.");
+    //     }
+    //   }
     };
 
     return (
