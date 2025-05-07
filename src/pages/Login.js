@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 
-// LINK = "https://plantdbmenem.netlify.app/";
 
 function Login() {
     const [username, setUsername] = useState("");

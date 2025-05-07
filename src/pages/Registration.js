@@ -15,11 +15,6 @@ function Registration() {
         password: Yup.string().min(3).max(15).required(),
     });
 
-    // const onSumbit = (data) => {
-    //     axios.post("http://localhost:3001/auth", data).then(() => {
-    //         console.log(data);
-    //     });
-    // };
     const [successMessage, setSuccessMessage] = useState("");
 
 
@@ -29,14 +24,12 @@ function Registration() {
             console.log(response.data);
             setSuccessMessage("Registration successful!");
             resetForm();
-          // Maybe redirect or show success message here
         } catch (error) {
             if (error.response) {
                 setSuccessMessage(""); 
-            // Server responded but with an error status
             if (error.response.status === 409) {
                 setErrors({ username: "Username already taken. Try another" });
-                // Clear fields manually so error is preserved
+                // Clear fields
                 setFieldValue("username", "", false);
                 setFieldValue("password", "", false);
             } else {
@@ -63,7 +56,7 @@ function Registration() {
                 autocomplete="off"
                 id="inputCreatePost"
                 name="username"
-                placeholder="(Ex. John123...)"
+                placeholder="(Ex. Giota123...)"
             />
             <label>Password: </label>
             <ErrorMessage name="password" component="span" />
