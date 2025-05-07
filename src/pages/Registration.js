@@ -23,10 +23,10 @@ function Registration() {
             const response = await axios.post("https://plant-db-7e0c17d70235.herokuapp.com/auth", data, {headers: {accessToken: sessionStorage.getItem("accessToken")}});
             if(response.data.error){
                 alert(response.data.error);
-            }
+            }else{
             console.log(response.data);
             setSuccessMessage("Registration successful!");
-            resetForm();
+            resetForm();}
         } catch (error) {
             if (error.response) {
                 setSuccessMessage(""); 
