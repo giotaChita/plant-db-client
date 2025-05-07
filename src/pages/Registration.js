@@ -20,7 +20,7 @@ function Registration() {
 
     const onSubmit = async (data, { setSubmitting, setErrors, setFieldValue , resetForm}) => {
         try {
-            const response = await axios.post("https://plant-db-7e0c17d70235.herokuapp.com/auth", data);
+            const response = await axios.post("https://plant-db-7e0c17d70235.herokuapp.com/auth", data, {headers: {accessToken: sessionStorage.getItem("accessToken")}});
             console.log(response.data);
             setSuccessMessage("Registration successful!");
             resetForm();
