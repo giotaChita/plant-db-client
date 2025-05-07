@@ -48,15 +48,37 @@ function Home(){
 
     // Delete a plant
     const deletePlant = async (id) => {
-      try{
-        await axios.delete(`https://plant-db-7e0c17d70235.herokuapp.com/plant/${id}`);
-        setListOfPlants(listOfPlants.filter((plant) => plant.id !== id));
-        setCurrentIndex(0); // reset to avoid out-of-range
-      }
-      catch (error) {
-        console.log("Error deleting plant: ", error);
+      try {
+        const response = await axios.delete(
+          `https://plant-db-7e0c17d70235.herokuapp.com/plant/${id}`,
+          {
+            headers: {
+              accessToken: sessionStorage.getItem("accessToken")
+            }
+          }
+        );
+    
+        if (response.data.error) {
+          alert(response.data.error); // Optionally handle backend errors
+        } else {
+          setListOfPlants(listOfPlants.filter((plant) => plant.id !== id));
+          setCurrentIndex(0); // Reset to avoid out-of-range
+        }
+      } catch (error) {
+        console.log("Error deleting plant:", error);
+        alert("You must be logged in to delete a plant.");
       }
     };
+    // const deletePlant = async (id) => {
+    //   try{
+    //     await axios.delete(`https://plant-db-7e0c17d70235.herokuapp.com/plant/${id}`);
+    //     setListOfPlants(listOfPlants.filter((plant) => plant.id !== id));
+    //     setCurrentIndex(0); // reset to avoid out-of-range
+    //   }
+    //   catch (error) {
+    //     console.log("Error deleting plant: ", error);
+    //   }
+    // };
 
     useEffect(() => {
         axios.get("https://plant-db-7e0c17d70235.herokuapp.com/plant").then((response) => {
